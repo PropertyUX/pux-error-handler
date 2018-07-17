@@ -1,0 +1,38 @@
+{
+  "name": "pux-error-handler",
+  "description": "Global elmah.io and slack error handling",
+  "version": "0.0.1",
+  "author": {
+    "name": "Gary Chapman",
+    "email": "gary.chapman@propertyux.com"
+  },
+  "license": "MIT",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/propertyux/default-error-handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/propertyux/default-error-handler/issues"
+  },
+  "main": "start.js",
+  "scripts": {
+    "test": "gulp test",
+    "coveralls": "gulp test && cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "maintainers": [
+    {
+      "name": "garychapman",
+      "email": "gary.chapman@propertyux.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/hubot-rocketchat-listener-0.0.1.tgz_1465460862155_0.37888075155206025"
+  },
+  "directories": {},
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "slack-webhook": "^1.0.0"
+  }
+}

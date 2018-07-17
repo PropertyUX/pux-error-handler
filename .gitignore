@@ -1,0 +1,9 @@
+node_modules
+.DS_Store*
+.hubot_history
+/yarn-error.log
+/.nyc_output
+.env
+lcov.info
+/combined.log
+/error.log
