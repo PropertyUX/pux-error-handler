@@ -4,11 +4,12 @@ Adds handlers for unhandledRejection and uncaughtException which automatically l
 
 # Environment 
 
-process.env.SLACK_WEBHOOK_URL
-process.env.ELMAH_IO_LOG
+- process.env.SLACK_WEBHOOK_URL
+- process.env.ELMAH_IO_LOG
 
 # Usage
 
+```
 const errorHandler = require('pux-error-handler')
 
 errorHandler.use({
@@ -16,3 +17,4 @@ errorHandler.use({
   logId: process.env.ELMAH_IO_LOG,
   excludedErrors: ['no login token'],
   application: `Concierge (${process.env.INSTANCE_NAME})`})
+```
