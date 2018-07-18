@@ -38,11 +38,9 @@ async function sendToAll () {
 }
 
 function use(args) {
-  if (!(_.has(args, 'logId'))) return this
-
   platforms.forEach((p) => p.use(args))
 
-  if (args.app && args.constructor === Function) {
+  if (_.isFunction(args.app)) {
     args.app.use(elmah.auto())
   }
 

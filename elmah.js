@@ -31,6 +31,7 @@ function parseData (data) {
 }
 
 function send (err, req, next) {
+  if (!option.elmahLogId) return Promise.resolve() // keep our caller happy
   req = req || err.req
   if (req) {
     var cookie = parseCookies(req)
@@ -65,12 +66,12 @@ function send (err, req, next) {
     severity: severity || null,
     type: 'Error',
     url: fullUrl || null,
-    user: process.env.USERNAME || null,
+    user: option.elamhUsername || null,
     version: option.version || null
   }
   var conf = {
     url: site,
-    qs: {logid: option.logId},
+    qs: {logid: option.elmahLogId},
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     json: obj
@@ -90,6 +91,9 @@ function auto () {
 
 function use (opt) {
   option = opt
+
+  if (!option.elmahLogId)
+    console.log('No elmahLogId vale provided') // warning only
 }
 
 function sendError (conf) {
