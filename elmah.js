@@ -93,7 +93,7 @@ function use (opt) {
   option = opt
 
   if (!option.elmahLogId)
-    console.log('No elmahLogId vale provided') // warning only
+    console.log('No elmahLogId value provided') // warning only
 }
 
 function sendError (conf) {
